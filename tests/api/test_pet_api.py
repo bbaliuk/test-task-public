@@ -30,6 +30,7 @@ def test_update_pet(pet_client, create_pet_factory, faker, updated_data):
     assert_that(updated_pet.name).is_equal_to(payload.name)
     assert_that(updated_pet.status).is_equal_to(payload.status)
 
+
 def test_update_not_existing_pet(pet_client, create_pet_factory, faker, new_name, new_status):
     nonexistent_id = random.randint(10_000, 100_000)
     payload = PetPostPayload(
