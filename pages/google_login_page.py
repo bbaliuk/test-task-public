@@ -30,7 +30,6 @@ class LoginPage(BasePage):
             driver, (By.CSS_SELECTOR, "li[data-value='en-GB']")
         )
 
-
     def open_page(self):
         self.driver.get(self.URL)
 
